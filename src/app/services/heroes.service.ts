@@ -56,11 +56,14 @@ private heroes: Heroe[] = [
 ];
 
   constructor() {
-    console.log('Servicio Listo para usar !!! -> 🛰');
+   // console.log('Servicio Listo para usar !!! -> 🛰');
    }
 
 
    getHeroes = (): Heroe[] =>  this.heroes;
+
+   getHeroe = ( idx: string) => this.heroes[idx];
+
 
 }
 

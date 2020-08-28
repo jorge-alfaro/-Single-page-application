@@ -10,7 +10,9 @@ body{
 }
 
 /* animated */
-
+.img-logo {
+  width: 100px;
+}
 
 .animated{
   -webkit-animation-duration: 1s;
