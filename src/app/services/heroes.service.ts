@@ -56,7 +56,7 @@ private heroes: Heroe[] = [
 ];
 
   constructor() {
-   // console.log('Servicio Listo para usar !!! -> 🛰');
+   console.log('Servicio Listo para usar !!! -> 🛰');
    }
 
 
@@ -64,7 +64,19 @@ private heroes: Heroe[] = [
 
    getHeroe = ( idx: string) => this.heroes[idx];
 
+   buscarHeroes = (termino: string ): Heroe[] => {
+    const heroesArr: Heroe[] = [];
+    termino = termino.toLowerCase();
 
+    for (const heroe of this.heroes){
+      const nombre = heroe.nombre.toLowerCase();
+
+      if ( nombre.indexOf( termino) >= 0){
+        heroesArr.push( heroe );
+      }
+    }
+    return heroesArr;
+   }
 }
 
 
